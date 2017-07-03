@@ -1,11 +1,11 @@
 package pl.com.sages.spring.bootcamp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import pl.com.sages.spring.bootcamp.dao.ProductDao;
 import pl.com.sages.spring.bootcamp.model.Product;
 
-@Component
+@Service
 public class ProductService {
 
     @Autowired
