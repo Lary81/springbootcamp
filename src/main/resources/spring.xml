@@ -10,11 +10,13 @@
         <property name="productDao" ref="productDao"/>
     </bean>
 
-    <bean class="pl.com.sages.spring.bootcamp.service.PaymentService"/>
-    <bean class="pl.com.sages.spring.bootcamp.service.CartService"/>
+    <bean id="paymentService" class="pl.com.sages.spring.bootcamp.service.PaymentService"/>
+    <bean id="cartService" class="pl.com.sages.spring.bootcamp.service.CartService"/>
 
     <bean class="pl.com.sages.spring.bootcamp.service.ApplicationService">
-
+        <property name="paymentService" ref="paymentService"/>
+        <property name="cartService" ref="cartService"/>
+        <property name="productService" ref="productService"/>
     </bean>
 
 </beans>
