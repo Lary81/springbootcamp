@@ -8,7 +8,7 @@ public class MainApplication {
 
     public static void main(String[] args) {
 
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml","dao.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
         ApplicationService applicationService = applicationContext.getBean(ApplicationService.class);
         applicationService.doShopping();
 

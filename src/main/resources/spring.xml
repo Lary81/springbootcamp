@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <import resource="dao.xml"/>
+
     <bean id="productService" class="pl.com.sages.spring.bootcamp.service.ProductService">
         <property name="productDao" ref="productDao"/>
     </bean>
