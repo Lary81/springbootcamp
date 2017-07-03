@@ -1,5 +1,6 @@
 package pl.com.sages.spring.bootcamp.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import pl.com.sages.spring.bootcamp.model.Product;
 
 import java.util.ArrayList;
@@ -7,9 +8,15 @@ import java.util.List;
 
 public class ApplicationService {
 
+    @Autowired
     private ProductService productService;
+
+    @Autowired
     private CartService cartService;
+
+    @Autowired
     private PaymentService paymentService;
+
     private String applicationName;
 
     public void doShopping() {
@@ -33,18 +40,6 @@ public class ApplicationService {
         for (Product product : productList) {
             System.out.println(product.getName());
         }
-    }
-
-    public void setProductService(ProductService productService) {
-        this.productService = productService;
-    }
-
-    public void setCartService(CartService cartService) {
-        this.cartService = cartService;
-    }
-
-    public void setPaymentService(PaymentService paymentService) {
-        this.paymentService = paymentService;
     }
 
     public void setApplicationName(String applicationName) {
