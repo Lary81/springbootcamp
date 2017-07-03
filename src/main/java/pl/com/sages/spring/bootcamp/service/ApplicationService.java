@@ -42,6 +42,18 @@ public class ApplicationService {
         }
     }
 
+    public void setProductService(ProductService productService) {
+        this.productService = productService;
+    }
+
+    public void setCartService(CartService cartService) {
+        this.cartService = cartService;
+    }
+
+    public void setPaymentService(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
+
     public void setApplicationName(String applicationName) {
         this.applicationName = applicationName;
     }
