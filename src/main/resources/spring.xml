@@ -17,7 +17,11 @@
         <property name="paymentService" ref="paymentService"/>
         <property name="cartService" ref="cartService"/>
         <property name="productService" ref="productService"/>
-        <property name="applicationName" value="Kodolamacz bootcamp"/>
+        <property name="applicationName" ref="applicationName"/>
+    </bean>
+
+    <bean id="applicationName" class="java.lang.String">
+        <constructor-arg value="Kodolamacz bootcamp"/>
     </bean>
 
 </beans>
