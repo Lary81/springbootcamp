@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="productDao" class="pl.com.sages.spring.bootcamp.dao.ProductDaoImpl">
+        <constructor-arg>
+            <map>
+                <entry key="konewka" value-ref="konewka"/>
+                <entry key="szpadel" value-ref="szpadel"/>
+                <entry key="taczki" value-ref="taczki"/>
+                <entry key="kosiarka" value-ref="kosiarka"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="konewka" class="pl.com.sages.spring.bootcamp.model.Product">
+        <constructor-arg index="0" value="konewka"/>
+        <constructor-arg index="1" value="10"/>
+    </bean>
+    <bean id="szpadel" class="pl.com.sages.spring.bootcamp.model.Product">
+        <constructor-arg index="0" value="szpadel"/>
+        <constructor-arg index="1" value="100"/>
+    </bean>
+    <bean id="taczki" class="pl.com.sages.spring.bootcamp.model.Product">
+        <constructor-arg index="0" value="taczki"/>
+        <constructor-arg index="1" value="150"/>
+    </bean>
+    <bean id="kosiarka" class="pl.com.sages.spring.bootcamp.model.Product">
+        <constructor-arg index="0" value="kosiarka"/>
+        <constructor-arg index="1" value="1500"/>
+    </bean>
+
+</beans>
