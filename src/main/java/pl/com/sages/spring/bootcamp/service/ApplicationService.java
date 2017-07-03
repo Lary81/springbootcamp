@@ -1,8 +1,11 @@
 package pl.com.sages.spring.bootcamp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import pl.com.sages.spring.bootcamp.model.Product;
 
+import javax.annotation.Resource;
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 
