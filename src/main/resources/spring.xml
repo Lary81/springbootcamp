@@ -9,11 +9,9 @@
 
     <context:annotation-config/>
 
-    <import resource="dao.xml"/>
+    <context:component-scan base-package="pl.com.sages.spring.bootcamp"/>
 
-    <bean id="productService" class="pl.com.sages.spring.bootcamp.service.ProductService"/>
-    <bean id="paymentService" class="pl.com.sages.spring.bootcamp.service.PaymentService"/>
-    <bean id="cartService" class="pl.com.sages.spring.bootcamp.service.CartService"/>
+    <import resource="dao.xml"/>
 
     <bean class="pl.com.sages.spring.bootcamp.service.ApplicationService">
         <property name="applicationName">

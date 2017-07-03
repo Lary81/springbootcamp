@@ -2,6 +2,7 @@ package pl.com.sages.spring.bootcamp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import pl.com.sages.spring.bootcamp.dao.UserDao;
 import pl.com.sages.spring.bootcamp.model.Product;
 
 import javax.annotation.Resource;
@@ -19,6 +20,9 @@ public class ApplicationService {
 
     @Autowired
     private PaymentService paymentService;
+
+    @Autowired
+    private UserDao userDao;
 
     private String applicationName;
 
