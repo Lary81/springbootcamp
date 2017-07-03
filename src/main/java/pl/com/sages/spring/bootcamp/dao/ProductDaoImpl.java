@@ -2,19 +2,14 @@ package pl.com.sages.spring.bootcamp.dao;
 
 import pl.com.sages.spring.bootcamp.model.Product;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class ProductDaoImpl implements ProductDao {
 
     private final Map<String, Product> productMap;
 
-    public ProductDaoImpl() {
-        this.productMap = new HashMap<String, Product>();
-        addProduct("konewka", 10);
-        addProduct("szpadel", 100);
-        addProduct("taczki", 150);
-        addProduct("kosiarka", 1500);
+    public ProductDaoImpl(Map<String, Product> productMap) {
+        this.productMap = productMap;
     }
 
     @Override
