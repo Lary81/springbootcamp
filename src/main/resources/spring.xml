@@ -17,6 +17,7 @@
         <property name="paymentService" ref="paymentService"/>
         <property name="cartService" ref="cartService"/>
         <property name="productService" ref="productService"/>
+        <property name="applicationName" value="Kodolamacz bootcamp"/>
     </bean>
 
 </beans>

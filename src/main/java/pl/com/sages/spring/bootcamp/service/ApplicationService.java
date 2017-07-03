@@ -10,8 +10,10 @@ public class ApplicationService {
     private ProductService productService;
     private CartService cartService;
     private PaymentService paymentService;
+    private String applicationName;
 
-    public void doShopping(){
+    public void doShopping() {
+        System.out.println("Application name: " + applicationName);
 
         Product product1 = productService.getProduct("konewka");
         Product product2 = productService.getProduct("szpadel");
@@ -44,4 +46,9 @@ public class ApplicationService {
     public void setPaymentService(PaymentService paymentService) {
         this.paymentService = paymentService;
     }
+
+    public void setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+    }
+
 }
