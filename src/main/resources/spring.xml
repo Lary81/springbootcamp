@@ -11,14 +11,12 @@
 
     <context:component-scan base-package="pl.com.sages.spring.bootcamp.service"/>
 
+    <context:property-placeholder location="params.properties" file-encoding="UTF-8" ignore-unresolvable="false"/>
+
     <import resource="dao.xml"/>
 
     <bean class="pl.com.sages.spring.bootcamp.service.ApplicationService">
-        <property name="applicationName">
-            <bean class="java.lang.String">
-                <constructor-arg value="Kodolamacz bootcamp"/>
-            </bean>
-        </property>
+        <property name="applicationName" value="${kodolamacz.app.name}"/>
     </bean>
 
 </beans>
