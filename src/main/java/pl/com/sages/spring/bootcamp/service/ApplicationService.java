@@ -23,6 +23,10 @@ public class ApplicationService {
     @Value("${kodolamacz.app.name}")
     private String applicationName;
 
+    public ApplicationService() {
+        System.out.println("Tworzę się :)");
+    }
+
     @PostConstruct
     public void afterCreate(){
         System.out.println("Stworzyłem beana!!!");

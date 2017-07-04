@@ -14,7 +14,9 @@ public class MainApplication {
 
         AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
 //        AbstractApplicationContext applicationContext = new AnnotationConfigApplicationContext(Spring.class);
+
         ApplicationService applicationService = applicationContext.getBean(ApplicationService.class);
+
         applicationService.doShopping();
 
         applicationContext.close();

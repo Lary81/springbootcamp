@@ -18,7 +18,8 @@
 
     <bean class="pl.com.sages.spring.bootcamp.service.ApplicationService"
           init-method="afterCreate"
-          destroy-method="beforeDestroy">
+          destroy-method="beforeDestroy"
+          scope="prototype">
         <property name="applicationName" value="${kodolamacz.app.name}"/>
     </bean>
 
