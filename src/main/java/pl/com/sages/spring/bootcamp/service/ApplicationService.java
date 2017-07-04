@@ -1,6 +1,7 @@
 package pl.com.sages.spring.bootcamp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import pl.com.sages.spring.bootcamp.model.Product;
 
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class ApplicationService {
     @Autowired
     private PaymentService paymentService;
 
+    @Value("${kodolamacz.app.name}")
     private String applicationName;
 
     public void doShopping() {

@@ -3,6 +3,7 @@ package pl.com.sages.spring.bootcamp.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import pl.com.sages.spring.bootcamp.dao.ProductDao;
 import pl.com.sages.spring.bootcamp.dao.ProductDaoImpl;
 import pl.com.sages.spring.bootcamp.service.ApplicationService;
@@ -10,13 +11,14 @@ import pl.com.sages.spring.bootcamp.service.ApplicationService;
 import java.util.HashMap;
 
 @Configuration
+@PropertySource(value = "classpath:params.properties", encoding = "UTF-8")
 @ComponentScan("pl.com.sages.spring.bootcamp")
 public class Spring {
 
     @Bean
     public ApplicationService createApplicationService() {
         ApplicationService applicationService = new ApplicationService();
-        applicationService.setApplicationName("Kodołamacz Bootcamp");
+//        applicationService.setApplicationName("Kodołamacz Bootcamp");
         return applicationService;
     }
 
