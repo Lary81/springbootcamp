@@ -3,6 +3,7 @@ package pl.com.sages.spring.bootcamp.service;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import pl.com.sages.spring.bootcamp.dao.ProductDao;
@@ -25,9 +26,13 @@ public class ProductServiceTest {
     @Autowired
     private ProductDao productDao;
 
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
     @Test
     public void should_find_all_products() throws Exception {
         //given
+        jdbcTemplate.execute("TRUNCATE product");
         productDao.addProduct("konewka",123);
         productDao.addProduct("konewka2",123);
         productDao.addProduct("konewka3",123);

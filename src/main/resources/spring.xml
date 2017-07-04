@@ -12,7 +12,7 @@
     <context:component-scan base-package="pl.com.sages.spring.bootcamp.service"/>
 
     <context:property-placeholder location="classpath:params.properties" file-encoding="UTF-8"
-                                  ignore-unresolvable="false"/>
+                                  ignore-unresolvable="true"/>
 
     <import resource="classpath:dao.xml"/>
 

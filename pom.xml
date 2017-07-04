@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pl.com.sages</groupId>
-    <artifactId>spring-bootcamp</artifactId>
+    <artifactId>springbootcamp</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -16,6 +16,7 @@
 
     <dependencies>
 
+        <!--Spring-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -42,13 +43,21 @@
             <version>${spring.version}</version>
         </dependency>
 
+        <!--PostgreSQL-->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.1.1</version>
+        </dependency>
+
+        <!--Adnotacje Javax Inject-->
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
             <version>1</version>
         </dependency>
 
-        <!-- LogBack dependencies -->
+        <!-- LogBack (logowanie w Springu) -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
@@ -60,6 +69,7 @@
             <version>${jcloverslf4j.version}</version>
         </dependency>
 
+        <!--Zależności do testów-->
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>

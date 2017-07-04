@@ -12,7 +12,7 @@ public class MainApplication {
     public static void main(String[] args) {
 
         AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
-//        AbstractApplicationContext applicationContext = new AnnotationConfigApplicationContext(Spring.class);
+        // AbstractApplicationContext applicationContext = new AnnotationConfigApplicationContext(Spring.class);
 
         ProductService productService = applicationContext.getBean(ProductService.class);
         List<Product> products = productService.findAllProducts();

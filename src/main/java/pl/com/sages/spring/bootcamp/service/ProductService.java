@@ -13,12 +13,23 @@ public class ProductService {
     @Autowired
     private ProductDao productDao;
 
-    public Product getProduct(String name) {
-        return productDao.getProduct(name);
+    public void addProduct(String name, int price) {
+        productDao.addProduct(name, price);
+    }
+
+    public Product findProduct(int id) {
+        return productDao.findProduct(id);
+    }
+
+    /**
+     * Zakładamy unikalność nazwy!
+     */
+    public Product findProduct(String name) {
+        return productDao.findProduct(name);
     }
 
     public List<Product> findAllProducts() {
-        List<Product> products = productDao.findAll();
-        return products;
+        return productDao.findAll();
     }
+
 }

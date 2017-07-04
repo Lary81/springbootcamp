@@ -40,10 +40,10 @@ public class ApplicationService {
     public void doShopping() {
         System.out.println("Application name: " + applicationName);
 
-        Product product1 = productService.getProduct("konewka");
-        Product product2 = productService.getProduct("szpadel");
-        Product product3 = productService.getProduct("kosiarka");
-        Product product4 = productService.getProduct("taczki");
+        Product product1 = productService.findProduct("konewka");
+        Product product2 = productService.findProduct("szpadel");
+        Product product3 = productService.findProduct("kosiarka");
+        Product product4 = productService.findProduct("taczki");
 
         List<Product> productList = new ArrayList<>(4);
         productList.add(product1);
