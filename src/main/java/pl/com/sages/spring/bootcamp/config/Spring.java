@@ -24,7 +24,7 @@ public class Spring {
 
     @Bean
     public ProductDao getProductDao() {
-        ProductDaoImpl productDao = new ProductDaoImpl(new HashMap<>());
+        ProductDaoImpl productDao = new ProductDaoImpl();
         productDao.addProduct("konewka", 10);
         productDao.addProduct("szpadel", 100);
         productDao.addProduct("taczki", 150);

@@ -1,16 +1,17 @@
 package pl.com.sages.spring.bootcamp.dao;
 
+import org.springframework.stereotype.Repository;
 import pl.com.sages.spring.bootcamp.model.Product;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+@Repository
 public class ProductDaoImpl implements ProductDao {
 
-    private final Map<String, Product> productMap;
-
-    public ProductDaoImpl(Map<String, Product> productMap) {
-        this.productMap = productMap;
-    }
+    private Map<String, Product> productMap = new HashMap<>();
 
     @Override
     public void addProduct(String productName, int price) {
@@ -20,6 +21,11 @@ public class ProductDaoImpl implements ProductDao {
     @Override
     public Product getProduct(String name) {
         return productMap.get(name);
+    }
+
+    @Override
+    public List<Product> findAll() {
+        return new ArrayList<>(productMap.values());
     }
 
 }

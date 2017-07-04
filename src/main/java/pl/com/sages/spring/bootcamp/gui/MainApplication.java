@@ -1,12 +1,11 @@
 package pl.com.sages.spring.bootcamp.gui;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.GenericApplicationContext;
-import pl.com.sages.spring.bootcamp.config.Spring;
-import pl.com.sages.spring.bootcamp.service.ApplicationService;
+import pl.com.sages.spring.bootcamp.model.Product;
+import pl.com.sages.spring.bootcamp.service.ProductService;
+
+import java.util.List;
 
 public class MainApplication {
 
@@ -15,9 +14,12 @@ public class MainApplication {
         AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
 //        AbstractApplicationContext applicationContext = new AnnotationConfigApplicationContext(Spring.class);
 
-        ApplicationService applicationService = applicationContext.getBean(ApplicationService.class);
+        ProductService productService = applicationContext.getBean(ProductService.class);
+        List<Product> products = productService.findAllProducts();
 
-        applicationService.doShopping();
+        for (Product product : products) {
+            System.out.println(product.getName());
+        }
 
         applicationContext.close();
     }
