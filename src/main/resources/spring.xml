@@ -11,11 +11,14 @@
 
     <context:component-scan base-package="pl.com.sages.spring.bootcamp.service"/>
 
-    <context:property-placeholder location="classpath:params.properties" file-encoding="UTF-8" ignore-unresolvable="false"/>
+    <context:property-placeholder location="classpath:params.properties" file-encoding="UTF-8"
+                                  ignore-unresolvable="false"/>
 
     <import resource="classpath:dao.xml"/>
 
-    <bean class="pl.com.sages.spring.bootcamp.service.ApplicationService">
+    <bean class="pl.com.sages.spring.bootcamp.service.ApplicationService"
+          init-method="afterCreate"
+          destroy-method="beforeDestroy">
         <property name="applicationName" value="${kodolamacz.app.name}"/>
     </bean>
 

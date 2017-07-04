@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import pl.com.sages.spring.bootcamp.model.Product;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +22,16 @@ public class ApplicationService {
 
     @Value("${kodolamacz.app.name}")
     private String applicationName;
+
+    @PostConstruct
+    public void afterCreate(){
+        System.out.println("Stworzyłem beana!!!");
+    }
+
+    @PreDestroy
+    public void beforeDestroy(){
+        System.out.println("Usuwam beana!!!");
+    }
 
     public void doShopping() {
         System.out.println("Application name: " + applicationName);
