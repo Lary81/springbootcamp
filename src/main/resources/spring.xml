@@ -9,7 +9,7 @@
 
     <context:annotation-config/>
 
-    <context:component-scan base-package="pl.com.sages.spring.bootcamp"/>
+    <context:component-scan base-package="pl.com.sages.spring.bootcamp.service"/>
 
     <import resource="dao.xml"/>
 
